@@ -1,0 +1,16 @@
+[[package]]
+category = "main"
+description = "datetime.timedelta replacement"
+name = "timedelta"
+optional = false
+python-versions = "*"
+version = "2020.12.3"
+
+[metadata]
+content-hash = "d190d3b15675d8189a0f3966d67442ddfcd840935a2a33f20e4690eece05688f"
+python-versions = "^3.8"
+
+[metadata.files]
+timedelta = [
+    {file = "timedelta-2020.12.3.tar.gz", hash = "sha256:41c28b314de9cb6e4c95fcc9f4e3ecee435f2fc821a079cd9243be4783ac4cf4"},
+]
