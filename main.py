@@ -1,5 +1,8 @@
 """Arquivo principal que será interpretado pelo interpretador."""
+from datetime import datetime
 import datetime
+import time
+
 
 def main():
 
@@ -13,11 +16,17 @@ def main():
     start = datetime.datetime.combine(sd, s) # Junta a data com o tempo.
     end = datetime.datetime.combine(ed, e) # Junta a data com o tempo.
     # É necessário o combine por conta de não poder fazer somas e subtrações utilizando o tempo sem a data embutida.
-    if end < start:
-        # Caso o usuário tenha colocado um horário final menor que o inicial, então é pra somar um dia na data do fim.
-        end = end + datetime.timedelta(days=1)
-    interval = end - start
-    print(str(interval))
+    if end == start and tempo1 == "00:00:00":
+        print("24:00:00")
+    else:
+        if end < start:
+            # Caso o usuário tenha colocado um horário final menor que o inicial, então é pra somar um dia na data do fim.
+            end = end + datetime.timedelta(days=1)
+        interval = end - start
+        print(end)
+        print(start)
+        print(time.strftime('%H:%M:%S', time.gmtime(interval.seconds)))
+    
 
 
 if __name__ == '__main__':
